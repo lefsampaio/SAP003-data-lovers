@@ -1,0 +1,111 @@
+* {
+    margin: 3px;
+  
+  }
+  .header{
+      text-align: center;
+      color: #ffd600;
+      text-shadow: 2px 2px rgb(0, 0, 0);
+      margin-bottom:10px; 
+      font-size: 35px;
+      margin-top:0; 
+
+  }
+  
+  body {
+    height: 100vh;
+    width:100vw;
+    background-color: #f7f7f7;
+    background-image:url("pokemon-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+   
+
+  }
+
+  .menu {
+  width: 250px; 
+  height:30px;
+  border:1px solid #ddd;  
+  display: inline-block;  
+  box-sizing: inherit;
+  margin-left: 25%;
+  }
+ 
+  #types-menu{
+   
+   margin-left: 0;
+  }
+  
+  .btn {
+    border-top: 1px solid;    
+    padding: 8px 16px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    vertical-align: middle;
+    -webkit-margin-start: 0.6em;
+    -webkit-margin-end: 0.6em;
+    font-weight:900;
+    }
+  .btn:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+    }
+  .btn:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+    }
+    
+  
+  .container-pokemons-painel{
+ padding-inline-start: 0;
+ background-color: rgb(240, 103, 85);
+ grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+ height: 70vh;
+ width: 50vw;
+ overflow: auto;
+ margin:10px 100px 10px 25%;
+   
+  }
+ 
+  .pokemons-painel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    
+   
+  }
+
+  
+  
+  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (min-width: 600px) {
+  body {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.header__logo {
+    line-height: 0;
+    padding: 10px;
+    width: 150px;
+    justify-content: center;
+}
+
+.pokemon-item{
+list-style: none;
+padding: 40px;
+background-color:#7ba2eb;
+color: black;
+}
