@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- <script src="data/injuries/injuries.js"></script> -->
-    <!-- <script src="data/lol/lol.js"></script> -->
-    <!-- <script src="data/patient/patient.js"></script> -->
-    <!-- <script src="data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="data/rickandmorty/rickandmorty.js"></script> -->
-    <!-- <script src="data/steam/steam.js"></script> -->
-    <!-- <script src="data/worldbank/worldbank.js"></script> -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <img class="header__logo" src="pgo_logo.png">
+    <h1 class="header">Bem vinda(o) a sua POKÉDEX</h1>
+  </header>
+
+  <section class="container-pokemons-painel">
+    <section id="pokemons-list" class='pokemons-painel'></section>
+  </section>
+  <section>
+    <select id="sort-menu" class="menu">
+
+      <option value="none-order">Ordem alfabética:</option>
+      <option value="a-z">A - Z</option>
+      <option value="z-a">Z - A</option>
+    </select>
+
+
+    <select id="types-menu" class="menu">
+      <option value="none-type">Filtrar por Tipo:</option>
+      <option value="Bug">Bug</option>
+      <option value="Dragon">Dragon</option>
+      <option value="Electric">Electric</option>
+      <option value="Fighting">Fighting</option>
+      <option value="Fire">Fire</option>
+      <option value="Flying">Flying</option>
+      <option value="Ghost">Ghost</option>
+      <option value="Grass">Grass</option>
+      <option value="Ground">Ground</option>
+      <option value="Ice">Ice</option>
+      <option value="Normal">Normal</option>
+      <option value="Poison">Poison</option>
+      <option value="Psychic">Psychic</option>
+      <option value="Rock">Rock</option>
+      <option value="Steel">Steel</option>
+      <option value="Water">Water</option>
+    </select>
+  </section>
+  <footer>
+    pé
+  </footer>
+
+  <script src="data/pokemon/pokemon.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
