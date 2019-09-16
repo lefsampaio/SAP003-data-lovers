@@ -1,23 +1,27 @@
+window.pokemon = {
 
-window.pokemon = getPokemons;
+  filterData: (data, condition) => {
+    const pokeTypes = data.filter(data =>
+      data.type.includes(condition));
+    return pokeTypes;
+  },
 
-getPokemons = () => {
-    return POKEMON["pokemon"];
+  sortData: (data, condition) => {
+    let sortPoke = "";
+    if (condition === 'a-z') {
+      sortPoke = data.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    else if (condition === 'z-a') {
+      sortPoke = data.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+    }
+    return (sortPoke);
+  },
+
+  computeStats: (data) => {
+    data.reduce((prev, next) => prev + next);
+    return data;
+
+
+  }
 }
-compareName = (a, b) => {
-    if (a.name < b.name)
-        return -1;
-    if (a.name > b.name)
-        return 1;
-    return 0;
-}
 
-sortArrayByName = (arrayPrincipal) => {
-    return arrayPrincipal.slice(0).sort(compareName);
-}
-
-
-
-//sortData(data, sortBy, sortOrder): //esta função recebe três parâmetros. O primeiro, data, nos entrega os dados. O segundo, sortBy, diz respeito a qual das informações quer usar para ordenar. O terceiro, sortOrder, indica se quer ordenar de maneira crescente ou decrescente.
-
-//computeStats(data): 

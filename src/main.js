@@ -1,72 +1,39 @@
 window.onload = () => {
-    showPokemon(getPokemons());
+  showPokemon(getPokemons);
 };
+const getPokemons = POKEMON.pokemon;
 
-getPokemons = () => {
-    return POKEMON["pokemon"];
-}
-
-compareName = (a, b) => {
-    if (a.name < b.name)
-        return -1;
-    if (a.name > b.name)
-        return 1;
-    return 0;
-}//return pokemon.sort((a, b) => a.name > b.name ? 1 : a.name < b.name ? -1 : 0)
-
-//pokemon.sort((a, b) => a.name > b.name ? -1 : a.name < b.name ? 1 : 0)
+const pokemonsList = document.getElementById("pokemons-list");
+const filterTypes = document.getElementById('types-menu');
+const alphabeticOrder = document.getElementById("alpha-order");
 
 
-sortArrayByName = (arrayPrincipal) => {
-    return arrayPrincipal.slice(0).sort(compareName);
-}
-//DOM
-const sortMenu = document.getElementById('sort-menu');
-sortMenu.addEventListener('change', (event) => {
-    if (event.target.value === 'a-z') {
-        const ordenaredPokemon = sortArrayByName(getPokemons());
-        showPokemon(ordenaredPokemon);
+showPokemon = (getPokemons) => {
+  pokemonsList.innerHTML = `
+${getPokemons.map(pokemon => `
+  <li class="pokemon-item">
+      <img src="${pokemon.img}" class="pokemon-img" />        
+      <h3 class="pokemon-name">${pokemon.name}</h3>    
+      <p>${pokemon.num}</p>
+      <p>Ovo: ${pokemon.egg}</p>
+      </li>
 
-    } else if (event.target.value === 'z-a') {
-        const orderReverse = sortArrayByName(getPokemons()).reverse();
-        showPokemon(orderReverse);
-    }
-    else if (event.target.value === 'none-order') {
-        const orderId = showPokemon(getPokemons());
-        showPokemon(orderId);
-    }
+`).join(" ")}
+
+    `}
+
+filterTypes.addEventListener('change', () => {
+  const selected = filterTypes.value;
+  const pokeTypes = window.pokemon.filterData(getPokemons, selected);
+  showPokemon(pokeTypes)
+
 })
 
-const orderTypes = document.getElementById('types-menu');
 
-orderTypes.addEventListener('change', () => {
-    const pokeTypes = getPokemons().filter((pokemon) => {
-        const typeTrue = pokemon.type.find((element) => {
-            return (event.target.value === element)
-        });
-        if (typeTrue) {
-            return pokemon
-        } else if (event.target.value === 'none-type') {
-            const orderId = showPokemon(getPokemons());
-            showPokemon(orderId);
-        }
-    });
-
-    showPokemon(pokeTypes);
+alphabeticOrder.addEventListener('change', () => {
+  const selected = alphabeticOrder.value;
+  const orderAtoZ = window.pokemon.sortData(getPokemons, selected);
+  showPokemon(orderAtoZ);
 })
 
-showPokemon = (array) => {
-    const pokemonsList = document.getElementById("pokemons-list");
-    pokemonsList.innerHTML = `
-    ${array.map((pokemon) => `
-    <li class="pokemon-item">
-        <img src="${pokemon["img"]}" class="pokemon-img" />        
-        <h3 class="pokemon-name">${pokemon["name"]}</h3>    
-        <p>${pokemon["num"]}</p>
-        <p>Ovo: ${pokemon["egg"]}</p>
-        </li>
-
-  `).join(" ")}
-      `
-}
 
