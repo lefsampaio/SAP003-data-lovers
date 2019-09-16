@@ -1,6 +1,6 @@
 window.pokemon = {
 
-  filterData: (data, condition) => {
+  filterType: (data, condition) => {
     const pokeTypes = data.filter(data =>
       data.type.includes(condition));
     return pokeTypes;
@@ -22,6 +22,11 @@ window.pokemon = {
     return data;
 
 
+  },
+
+  filterEgg: (data, condition) => {
+    const pokeEgg = data.filter(data =>
+      data.egg.includes(condition));
+    return pokeEgg;
   }
 }
-

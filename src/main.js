@@ -6,7 +6,7 @@ const getPokemons = POKEMON.pokemon;
 const pokemonsList = document.getElementById("pokemons-list");
 const filterTypes = document.getElementById('types-menu');
 const alphabeticOrder = document.getElementById("alpha-order");
-
+const filterEggs = document.getElementById("select-egg");
 
 showPokemon = (getPokemons) => {
   pokemonsList.innerHTML = `
@@ -24,16 +24,31 @@ ${getPokemons.map(pokemon => `
 
 filterTypes.addEventListener('change', () => {
   const selected = filterTypes.value;
-  const pokeTypes = window.pokemon.filterData(getPokemons, selected);
-  showPokemon(pokeTypes)
+  const pokeTypes = window.pokemon.filterType(getPokemons, selected);
+
+  if (selected === "none-type") {
+    showPokemon(getPokemons)
+  } else {
+    showPokemon(pokeTypes)
+  }
 
 })
-
 
 alphabeticOrder.addEventListener('change', () => {
   const selected = alphabeticOrder.value;
   const orderAtoZ = window.pokemon.sortData(getPokemons, selected);
-  showPokemon(orderAtoZ);
+  if (selected === "none-type") {
+    showPokemon(getPokemons);
+  } else {
+    showPokemon(orderAtoZ);
+  }
 })
+
+filterEggs.addEventListener('change' , () =>{
+  const selected = filterEggs.value;
+  const Eggs = window.pokemon.filterEgg(getPokemons, selected);
+  showPokemon(Eggs);
+})
+
 
 
