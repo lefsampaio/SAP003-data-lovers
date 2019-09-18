@@ -1,5 +1,5 @@
 * {
-    margin: 3px;
+    margin: 4px;
   
   }
   .header{
@@ -9,37 +9,77 @@
       margin-bottom:50px; 
       font-size: 35px;
   }
-  
-  body {
-    background-size: 100% 100%;
-    background-image: url("pokemon-img.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
- 
+  .h1{
     
-  }
+    text-align: center;
+    color: #ffd600;
+    text-shadow: 2px 2px rgb(0, 0, 0); 
+    font-size: 35px;
+    margin-bottom: 50px;
+    
 
+
+}
 
   .menu{
-    margin: 10px;
-    width: 250px; 
-    height:30px;
-    border:1px solid #ddd;  
-    display: inline-block;  
+    float: none;
     box-sizing: inherit;
- 
+    margin: 10px;
+    width: 250px;
+    height: 30px;
   }
-  
-  .container-pokemons-painel{
- padding-inline-start: 0;
- background-color: rgb(240, 103, 85);
- grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
- height: 70vh;
- width: 50vw;
- overflow: auto;
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 ;
+  background: #2c3e50;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #727b83;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
 
-   
-  }
  
   .pokemons-painel {
     display: flex;
@@ -54,92 +94,83 @@
     padding: 10px;
     width: 150px;
     justify-content: center;
+    
 }
 
 .pokemon-item{
-list-style: none;
-padding: 40px;
-background-color:#7ba2eb;
-color: black;
-}
+  list-style: none;
+  border: 2px solid #425F47;
+  border-radius: 10px; 
+  align-items: center;
+  text-align: center;  
+  background-image: url(img/fundo1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  
+  }
 
+.container-pokemons-painel{
 
-  
-  @media only screen and (min-width: 320px) {
-  .container-pokemons-painel{
-    padding-inline-start: 0;
-    background-color: rgb(85, 204, 240);
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-    height: 70vh;
-    width: 50vw;
-    overflow: auto;
-    margin:10px 100px 50px 25%;
-      
-     }
+  padding-inline-start: 0;
+  background-color: transparent;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  height: 70vh;
+  width: 50vw;
+  overflow: auto;
+ 
     
-     .pokemons-painel {
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: center;
-       text-align: center;
-       
-      
-     }
+   }
+  
+ 
 
-  .menu{
-    float: left;
-    border:1px solid #ddd;  
-    display: block;  
-    box-sizing: inherit;
+  @media screen and (max-width: 600px) {
+
+    .header{
+      text-align: center;
+      color: #ffd600;
+      text-shadow: 2px 2px rgb(0, 0, 0);
+      margin-bottom:50px; 
+      font-size: 35px;
+       
+  }
+    
+  body {
+    background-size: 100%;
+    background-image: url("pokemon-img.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    
+ 
+    
+  }
+  .header__logo {
+    line-height: 0;
+    padding: 10px;
+    width: 200px;
+    justify-content: center;
+    margin-left: 18%;  
+  }
+  
  
   }
 
-  .header{
-    text-align: center;
-    color: #ffd600;
-    text-shadow: 2px 2px rgb(0, 0, 0); 
-    font-size: 35px;
-    margin-top:0; 
 
-}
-.header__logo {
-  line-height: 0;
-  padding: 10px;
-  width: 150px;
-  justify-content: center;
-}
-
-.pokemon-item{
-list-style: none;
-border: 2px solid #425F47;
-border-radius: 10px; 
-align-items: center;
-text-align: center;  
-background-image: url(img/fundo1.jpg);
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;  
-}
-.h1{
-  
-    text-align: center;
-    color: #ffd600;
-    text-shadow: 2px 2px rgb(0, 0, 0); 
-    font-size: 35px;
-    margin-top:0; 
-
-
-}
+  .topnav a {
+    float: none;
+    width: 100%;
+    align-content: center;
+    margin-left:10px; 
   }
 
   .topnav {
     overflow: hidden;
     background-color: #333;
+    margin-right: 10px
   }
   
-  /* Style the topnav links */
+
   .topnav a {
-    float: left;
+    
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -147,18 +178,133 @@ background-position: center;
     text-decoration: none;
   }
   
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+
+  @media only screen and (min-width: 320px) {
+
+    
+    .container-pokemons-painel{
+      padding-inline-start: 0;
+      background-color:transparent;
+      grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+      height: 70vh;
+      width: 50vw;
+      overflow: auto;
+      margin:10px 100px 50px 25%;
+        
+       }
+         
+    body {
+      
+      background-size: cover;
+      background-image: url("pokemon-img.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      
+   
+      
+    }
+      
+       .pokemons-painel {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+        
+         
+        
+       }
+  
+    .menu{
+      float: left;
+      box-sizing: inherit;
+      margin: 10px;
+      width: 250px;
+      height: 30px;
+   
+    }
+  /* Reset Select */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 ;
+    background: #2c3e50;
+    background-image: none;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select */
+  .select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #727b83;
+    overflow: hidden;
+    border-radius: .25em;
+  }
+  select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+  }
+    .header{
+      text-align: center;
+      color: #ffd600;
+      text-shadow: 2px 2px rgb(0, 0, 0); 
+      font-size: 35px;
+  
+  }
+  .header__logo {
+    line-height: 0;
+    padding: 10px;
+    width: 200px;
+    justify-content: center;
+    
   }
   
-  /* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .topnav a {
-      float: none;
-      width: 100%;
-      align-content: center;
-      margin-left:10px; 
-    }
+  .pokemon-item{
+  list-style: none;
+  border: 2px solid #425F47;
+  border-radius: 10px; 
+  align-items: center;
+  text-align: center;  
+  background-image: url(img/fundo1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  
   }
+  .h1{
+    
+      text-align: center;
+      color: #ffd600;
+      text-shadow: 2px 2px rgb(0, 0, 0); 
+      font-size: 35px;
+      
+  
+  
+  }
+    }
