@@ -1,16 +1,18 @@
 window.onload = () => {
-  showPokemon(getPokemons);
-  showMenu(getPokemons);
-  //showTypes(getPokemons)
+  showPokemons(getPokemons);
+  showMenuEggs(getPokemons);
+  showMenuTypes(getPokemons);
+  showMenuWeaks(getPokemons);
 };
 const getPokemons = POKEMON.pokemon;
 
 const pokemonsList = document.getElementById("pokemons-list");
-const filterTypes = document.getElementById('types-menu');
+const filterTypes = document.getElementById("types-menu");
 const alphabeticOrder = document.getElementById("alpha-order");
-const filterEggs = document.getElementById("select-egg");
+const filterEggs = document.getElementById("eggs-menu");
+const filterWeakness = document.getElementById("weakness-menu");
 
-showPokemon = (getPokemons) => {
+showPokemons = (getPokemons) => {
   pokemonsList.innerHTML = `
 ${getPokemons.map(pokemon => `
   <li class="pokemon-item">
@@ -22,72 +24,78 @@ ${getPokemons.map(pokemon => `
 
 `).join(" ")}
 
-    `}
+    `;};
 
-filterTypes.addEventListener('change', () => {
+filterTypes.addEventListener("change", () => {
   const selected = filterTypes.value;
-  const pokeTypes = window.pokemon.filterType(getPokemons, selected);
+  const pokeTypes = pokemon.filterData(getPokemons, selected, "type");
 
   if (selected === "none-type") {
-    showPokemon(getPokemons)
+    showPokemons(getPokemons);
   } else {
-    showPokemon(pokeTypes)
+    showPokemons(pokeTypes);
   }
 
-})
+});
 
-alphabeticOrder.addEventListener('change', () => {
-  let orderOrigin = getPokemons.slice();
+alphabeticOrder.addEventListener("change", () => {
   const selected = alphabeticOrder.value;
-  const orderAtoZ = window.pokemon.sortData(getPokemons, selected);
- 
+  const orderAtoZ = pokemon.sortData(getPokemons, "name", selected);
   if (selected === "none-type") {
-    showPokemon(orderOrigin)
+    showPokemons(getPokemons);
   } else {
-    showPokemon(orderAtoZ)
+    showPokemons(orderAtoZ);
   }
-})
+});
 
-filterEggs.addEventListener('change', () => {
+filterEggs.addEventListener("change", () => {
   const selected = filterEggs.value;
-  const Eggs = window.pokemon.filterEgg(getPokemons, selected);
+  const Eggs = pokemon.filterData(getPokemons, selected, "egg");
 
   if (selected === "none-type") {
-    showPokemon(getPokemons)
+    showPokemons(getPokemons);
   } else {
-    showPokemon(Eggs)
+    showPokemons(Eggs);
   }
 
-})
+});
 
-showMenu = (getPokemons) =>{
-  let pokeEggs = [];
-  getPokemons.map(pokemon=> {
-    if (!pokeEggs.includes(pokemon.egg)){
-      pokeEggs.push(pokemon.egg);
-    }else{
-      return false;
-    }
-    
-  });
-filterEggs.innerHTML = "";
-filterEggs.innerHTML = `<option value="none-type">OVOS </option>`;
-filterEggs.innerHTML += pokeEggs.map(distancia=> `<option value="${distancia}">${distancia} </option>`)
+filterWeakness.addEventListener("change", () => {
+  const selected = filterWeakness.value;
+  const Weakness = pokemon.filterData(getPokemons, selected, "weaknesses");
 
-}
+  if (selected === "none-type") {
+    showPokemons(getPokemons);
+  } else {
+    showPokemons(Weakness);
+  }
 
-/*showTypes = (getPokemons) =>{
-  let pokeTypes = [];
-  getPokemons.map(pokemon=> {
-    if (!pokeTypes.includes(pokemon.type)){
-      pokeTypes.push(pokemon.type);
-    }else{
-      return false;
-    }
-    
-  });
-filterTypes.innerHTML = "";
-filterTypes.innerHTML = `<option value="none-type">OVOS </option>`;
-filterTypes.innerHTML += pokeTypes.map(tipos=> `<option value="${tipos}">${tipos} </option>`)
+});
 
-}*/
+showMenuEggs = (getPokemons) => {
+  let pokeEggs= [...new Set(getPokemons.map(pokemon => pokemon.egg).flat())].sort();
+  filterEggs.innerHTML = "";
+  filterEggs.innerHTML = "<option value=\"none-type\">Filtrar por ovos: </option>";
+  filterEggs.innerHTML += pokeEggs.map(distancia => `<option value="${distancia}">${distancia} </option>`);
+
+};
+
+showMenuTypes = (getPokemons) => {
+  let poketypes= [...new Set(getPokemons.map(pokemon => pokemon.type).flat())].sort();
+  filterTypes.innerHTML = "";
+  filterTypes.innerHTML = "<option value=\"none-type\">Filtrar por tipo: </option>";
+  filterTypes.innerHTML += poketypes.map(types => `<option value="${types}">${types} </option>`);
+
+};
+
+showMenuWeaks = (getPokemons) =>{
+  let pokeWeakness= [...new Set(getPokemons.map(pokemon => pokemon.weaknesses).flat())].sort();
+  filterWeakness.innerHTML = "";
+  filterWeakness.innerHTML = "<option value=\"none-type\">Filtrar por fraqueza: </option>";
+  filterWeakness.innerHTML += pokeWeakness.map(weaknesses => `<option value="${weaknesses}">${weaknesses} </option>`);
+};
+
+// candy.addEventListener('click', () => {
+//   const pokeCandy = window.pokemon.computeStats(getPokemons);
+//   console.log(pokeCandy)
+// })
