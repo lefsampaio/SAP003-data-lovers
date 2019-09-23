@@ -88,7 +88,126 @@ describe("pokemon", () => {
 
       );
     });
+    
   });
 
+});
+
+describe("pokemon.sortData", () => {
+  it("is a function", () => {
+    expect(typeof pokemon.sortData).toBe("function");
+  });
+
+  it("should return alphabetic order ASC", () => {
+
+    expect(pokemon.sortData(mockPokemon, "name", "a-z")).toEqual(
+      [ { "id": 1,
+        "num": "001",
+        "name": "Bulbasaur",
+        "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
+        "type": [
+          "Grass",
+          "Poison"]
+      },
+      {
+        "id": 148,
+        "num": "148",
+        "name": "Dragonair",
+        "img": "http://www.serebii.net/pokemongo/pokemon/148.png",
+        "type": [
+          "Dragon"]
+      },
+      {
+        "id": 149,
+        "num": "149",
+        "name": "Dragonite",
+        "img": "http://www.serebii.net/pokemongo/pokemon/149.png",
+        "type": [
+          "Dragon",
+          "Flying"]
+      },
+      {
+        "id": 147,
+        "num": "147",
+        "name": "Dratini",
+        "img": "http://www.serebii.net/pokemongo/pokemon/147.png",
+        "type": [
+          "Dragon"]
+      },
+
+      {
+        "id": 2,
+        "num": "002",
+        "name": "Ivysaur",
+        "img": "http://www.serebii.net/pokemongo/pokemon/002.png",
+        "type": [
+          "Grass",
+          "Poison"
+        ]
+      }
+      ]
+
+    );
+  });
+    
+});
+
+describe("pokemon.sortData", () => {
+  it("is a function", () => {
+    expect(typeof pokemon.sortData).toBe("function");
+  });
+
+  it("should return alphabetic order DESC", () => {
+
+    expect(pokemon.sortData(mockPokemon, "name", "z-a")).toEqual(
+      [ {
+        "id": 2,
+        "num": "002",
+        "name": "Ivysaur",
+        "img": "http://www.serebii.net/pokemongo/pokemon/002.png",
+        "type": [
+          "Grass",
+          "Poison"
+        ]
+      },
+      {
+        "id": 147,
+        "num": "147",
+        "name": "Dratini",
+        "img": "http://www.serebii.net/pokemongo/pokemon/147.png",
+        "type": [
+          "Dragon"]
+      },
+      {
+        "id": 149,
+        "num": "149",
+        "name": "Dragonite",
+        "img": "http://www.serebii.net/pokemongo/pokemon/149.png",
+        "type": [
+          "Dragon",
+          "Flying"]
+      },
+      {
+        "id": 148,
+        "num": "148",
+        "name": "Dragonair",
+        "img": "http://www.serebii.net/pokemongo/pokemon/148.png",
+        "type": [
+          "Dragon"]
+      },
+  
+      { "id": 1,
+        "num": "001",
+        "name": "Bulbasaur",
+        "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
+        "type": [
+          "Grass",
+          "Poison"]
+      },
+      ]
+
+    );
+  });
+    
 });
 
