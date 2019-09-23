@@ -8,6 +8,8 @@
       text-shadow: 2px 2px rgb(0, 0, 0);
       margin-bottom:50px; 
       font-size: 35px;
+      
+      
   }
   .h1{
     
@@ -21,13 +23,6 @@
 
 }
 
-  .menu{
-    float: none;
-    box-sizing: inherit;
-    margin: 10px;
-    width: 250px;
-    height: 30px;
-  }
 /* Reset Select */
 select {
   -webkit-appearance: none;
@@ -36,7 +31,7 @@ select {
   appearance: none;
   outline: 0;
   box-shadow: none;
-  border: 0 ;
+  border: 0;
   background: #2c3e50;
   background-image: none;
 }
@@ -51,9 +46,11 @@ select::-ms-expand {
   width: 20em;
   height: 3em;
   line-height: 3;
-  background: #727b83;
+  background: #727b83 ;
   overflow: hidden;
   border-radius: .25em;
+  
+
 }
 select {
   flex: 1;
@@ -89,12 +86,12 @@ select {
   
   }
 
-.header__logo {
+  .header__logo {
     line-height: 0;
-    padding: 10px;
+    padding: 0px;
     width: 150px;
-    justify-content: center;
-    
+
+
 }
 
 .pokemon-item{
@@ -121,10 +118,45 @@ select {
     
    }
   
- 
 
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+
+  .topnav .icon {
+    display: none;
+  }
+  
+
+  
   @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
 
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+   
+    }
     .header{
       text-align: center;
       color: #ffd600;
@@ -143,41 +175,12 @@ select {
  
     
   }
-  .header__logo {
-    line-height: 0;
-    padding: 10px;
+  .header__logo {  
     width: 200px;
-    justify-content: center;
-    margin-left: 18%;  
+    margin-left: 17%;  
   }
-  
- 
   }
 
-
-  .topnav a {
-    float: none;
-    width: 100%;
-    align-content: center;
-    margin-left:10px; 
-  }
-
-  .topnav {
-    overflow: hidden;
-    background-color: #333;
-    margin-right: 10px
-  }
-  
-
-  .topnav a {
-    
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
 
   @media only screen and (min-width: 320px) {
 
@@ -230,7 +233,6 @@ select {
     outline: 0;
     box-shadow: none;
     border: 0 ;
-    background: #2c3e50;
     background-image: none;
   }
   /* Remove IE arrow */
@@ -244,15 +246,16 @@ select {
     width: 20em;
     height: 3em;
     line-height: 3;
-    background: #727b83;
+    background: #acd6ff ;
     overflow: hidden;
     border-radius: .25em;
   }
   select {
     flex: 1;
     padding: 0 .5em;
-    color: #fff;
+    color: rgb(0, 0, 0);
     cursor: pointer;
+    font-weight: bold;
   }
   /* Arrow */
   .select::after {
@@ -276,14 +279,13 @@ select {
       color: #ffd600;
       text-shadow: 2px 2px rgb(0, 0, 0); 
       font-size: 35px;
+      
+
   
   }
   .header__logo {
-    line-height: 0;
-    padding: 10px;
     width: 200px;
-    justify-content: center;
-    
+
   }
   
   .pokemon-item{

@@ -1,39 +1,20 @@
 window.pokemon = {
 
-  filterType: (data, condition) => {
+  filterData: (data, condition, target) => {
     return data.filter(data =>
-      data.type.includes(condition));
-
+      data[target].includes(condition));
   },
 
-  sortData: (data, condition) => {
-    let sortPoke = "";
-  // let arrayOriginal = [];
-    if (condition === 'a-z') {
-      sortPoke = data.sort((a, b) => a.name.localeCompare(b.name));
+  sortData: (data, sortBy, sortOrder) => {
+    if (sortOrder === "a-z") {
+      return data.slice().sort((a, b) => a[sortBy].localeCompare(b[sortBy]));
     }
-    else if (condition === 'z-a') {
-      sortPoke = data.sort((a, b) => a.name.localeCompare(b.name)).reverse();
-    }//else{
-     // return arrayOriginal.slice().sort((a, b) => a.name.localeCompare(b.name))
-   // }
-      //sortPoke = data.slice().sort((a, b) => a.name.localeCompare(b.name));
-   
-    return (sortPoke);
+    else if (sortOrder === "z-a") {
+      return data.slice().sort((a, b) => a[sortBy].localeCompare(b[sortBy])).reverse();
+    }
   },
- /*sortArrayByName:(arrayOriginal)=> {
-    return arrayOriginal.slice().sort(sortData(data, condition));
-  },*/
+
   computeStats: (data) => {
-    data.reduce((prev, next) => prev + next);
-    return data;
-
-
-  },
-
-  filterEgg: (data, condition) => {
-    return data.filter(data =>
-      data.egg.includes(condition));
-      
+    return data.reduce((prev, next) => prev + next);
   }
-}
+};

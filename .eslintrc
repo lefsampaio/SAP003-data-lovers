@@ -5,9 +5,8 @@
     "parserOptions": {
       "ecmaVersion": 6
     },
-    "extends": "eslint:recommended",
     "globals": {
-      "cipher": false
+      "data": false
     },
     "rules": {
       "indent": ["error", 2],
