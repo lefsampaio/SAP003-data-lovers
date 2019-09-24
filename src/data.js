@@ -18,3 +18,12 @@ window.pokemon = {
     return data.reduce((prev, next) => prev + next);
   }
 };
+
+  //função reduce
+  function sum(acc,val){
+    if(val !== undefined){
+      return acc +  val;
+      
+ }
+return acc;
+    }
