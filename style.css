@@ -1,0 +1,73 @@
+[class*="col-"] {
+  width: 100%;
+}
+
+body{
+font-family: arial;
+text-align: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url("img/fundo.jpg");
+
+}
+
+.pokemon-list1{
+/*position: absolute;
+text-align: center;
+display: flex;
+justify-content: center;*/
+margin-left: auto;
+margin-right: auto;
+width: 6em;
+margin-top: 20px;
+
+}
+
+.titulo{
+position:absolute;
+margin-top: 10px;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+top: 0px;
+left: 0px;
+text-align: center;
+right: 50px;
+bottom: 50px;
+}
+
+
+.pokemon-item{
+box-sizing: inherit;
+margin-top: 100px;
+color: black;
+background-color: blue;
+background: rgba(255,255,255,0.5);
+right: 30px;
+bottom: 30px;
+padding: 30px;
+display: inline-block;
+border-radius: 10px;
+}
+
+.search{
+  position:absolute;
+  margin-top: 10px;
+  font-size: 100%;
+  font: inherit;
+  top: 40px;
+  left: 40px;
+  text-align: center;
+  right: 70px;
+}
+
+input{
+background-color: #AFEEEE;
+}
+
+/*.image{
+  width: 100px;
+  height: 100px;
+  right: 100px;
+  bottom: 100px;
+}*/
