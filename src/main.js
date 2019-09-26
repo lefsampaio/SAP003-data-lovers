@@ -76,7 +76,7 @@ filterWeakness.addEventListener("change", () => {
 });
 
 showMenuEggs = (getPokemons) => {
-  let pokeEggs = [...new Set(getPokemons.map(pokemon => pokemon.egg).flat())].sort();
+  const pokeEggs = [...new Set(getPokemons.map(pokemon => pokemon.egg).flat())].sort();
   filterEggs.innerHTML = "";
   filterEggs.innerHTML = "<option value=\"none-type\">Filtrar por ovos: </option>";
   filterEggs.innerHTML += pokeEggs.map(distancia => `<option value="${distancia}">${distancia} </option>`).join("");
@@ -84,7 +84,7 @@ showMenuEggs = (getPokemons) => {
 };
 
 showMenuTypes = (getPokemons) => {
-  let poketypes = [...new Set(getPokemons.map(pokemon => pokemon.type).flat())].sort();
+  const poketypes = [...new Set(getPokemons.map(pokemon => pokemon.type).flat())].sort();
   filterTypes.innerHTML = "";
   filterTypes.innerHTML = "<option value=\"none-type\">Filtrar por tipo: </option>";
   filterTypes.innerHTML += poketypes.map(types => `<option value="${types}">${types} </option>`).join("");
@@ -92,18 +92,17 @@ showMenuTypes = (getPokemons) => {
 };
 
 showMenuWeaks = (getPokemons) => {
-  let pokeWeakness = [...new Set(getPokemons.map(pokemon => pokemon.weaknesses).flat())].sort();
+  const pokeWeakness = [...new Set(getPokemons.map(pokemon => pokemon.weaknesses).flat())].sort();
   filterWeakness.innerHTML = "";
   filterWeakness.innerHTML = "<option value=\"none-type\">Filtrar por fraqueza: </option>";
   filterWeakness.innerHTML += pokeWeakness.map(weaknesses => `<option value="${weaknesses}">${weaknesses} </option>`).join("");
 };
 
-
 showMenuEvolutions = (getPokemons) => {
-  const arrEvolutions = getPokemons.filter(elem => (elem.next_evolution))
-  const arrEvolutions2 = arrEvolutions.map(elem => (elem.name))
+  const arrEvolutions = getPokemons.filter(elem => (elem.next_evolution));
+  const arrEvolutions2 = arrEvolutions.map(elem => (elem.name));
   for (item of arrEvolutions2) {
-    pokeEvolution.innerHTML += `<option>${item}</option>`
+    pokeEvolution.innerHTML += `<option>${item}</option>`;
   }
 };
 
@@ -112,8 +111,7 @@ pokeEvolution.addEventListener("change", () => {
   const filterCandies = pokemon.candies(getPokemons, selected);
   const computeCandies = pokemon.computeStats(filterCandies);
 
-
   document.getElementById("msg").innerHTML = `${computeCandies}`;
 
-})
+});
 
