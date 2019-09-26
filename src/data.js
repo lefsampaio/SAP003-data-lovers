@@ -14,7 +14,31 @@ window.pokemon = {
     }
   },
 
+  candies: (data, condition) => {
+    const candiesArray = [];
+    data.forEach(elem => {
+      if (elem.name === condition) {
+        candiesArray.push(elem.candy_count);
+        if (elem.next_evolution) {
+          const nextName = elem.next_evolution[0].name;
+          if (elem.next_evolution[0].name) {
+            nextPokemon = data.forEach(element => {
+              if (element.name === nextName) {
+                candiesArray.push(element.candy_count);
+              }
+            });
+          }
+        }
+      }
+    });
+    return candiesArray;
+  },
+
   computeStats: (data) => {
-    return data.reduce((prev, next) => prev + next);
+    return data.reduce((prev, next) => {
+      if (next !== undefined) {
+        return prev + next;
+      } return prev;
+    });
   }
 };
