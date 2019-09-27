@@ -8,19 +8,13 @@ text-align: center;
 background-size: cover;
 background-repeat: no-repeat;
 background-image: url("img/fundo.jpg");
-
 }
 
 .pokemon-list1{
-/*position: absolute;
-text-align: center;
-display: flex;
-justify-content: center;*/
 margin-left: auto;
 margin-right: auto;
 width: 6em;
-margin-top: 20px;
-
+margin-top: 15px;
 }
 
 .titulo{
@@ -34,8 +28,8 @@ left: 0px;
 text-align: center;
 right: 50px;
 bottom: 50px;
+margin-left: auto;
 }
-
 
 .pokemon-item{
 box-sizing: inherit;
@@ -48,11 +42,12 @@ bottom: 30px;
 padding: 30px;
 display: inline-block;
 border-radius: 10px;
+margin-left: auto;
 }
 
 .search{
   position:absolute;
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 100%;
   font: inherit;
   top: 40px;
@@ -64,10 +59,3 @@ border-radius: 10px;
 input{
 background-color: #AFEEEE;
 }
-
-/*.image{
-  width: 100px;
-  height: 100px;
-  right: 100px;
-  bottom: 100px;
-}*/
