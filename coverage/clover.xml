@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1569526418616" clover="3.2.0">
-  <project timestamp="1569526418616" name="All files">
+<coverage generated="1569529115145" clover="3.2.0">
+  <project timestamp="1569529115145" name="All files">
     <metrics statements="22" coveredstatements="21" conditionals="14" coveredconditionals="10" methods="10" coveredmethods="10" elements="46" coveredelements="41" complexity="0" loc="22" ncloc="22" packages="1" files="1" classes="1">
       <file name="data.js" path="C:\Users\let_l\sap003-git\SAP003-data-lovers\src\data.js">
         <metrics statements="22" coveredstatements="21" conditionals="14" coveredconditionals="10" methods="10" coveredmethods="10"/>
