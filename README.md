@@ -40,7 +40,9 @@ seguinte (cumpra com as definições de pronto + critérios de aceitação).
 
 ### Desenho de interface do usuário
 
+
 #### Protótipo de baixa fidelidade
+![](prototipo.jpg)
 
 Durante seu trabalho você deverá fazer e iterar rascunhos de sua solução usando
 lápis e papel. Recomendamos que fotografe todas as iterações que fizer, suba
