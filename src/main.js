@@ -14,6 +14,7 @@ const alphabeticOrder = document.getElementById("alpha-order");
 const filterEggs = document.getElementById("eggs-menu");
 const filterWeakness = document.getElementById("weakness-menu");
 const Candies = document.getElementById("candies");
+const txtSearch = document.getElementById("search-name");
 
 showPokemons = (getPokemons) => {
   pokemonsList.innerHTML = `
@@ -105,6 +106,11 @@ filterWeakness.addEventListener("change", () => {
   }
 
 });
+txtSearch.addEventListener("keypress", ()=>{
+  const txtFilter = txtSearch.value;
+  const filterSearch = pokemon.filterData(getPokemons,txtFilter,"name");
+  showPokemons(filterSearch);
+})
 
 
 pokeEvolution.addEventListener("change", () => {

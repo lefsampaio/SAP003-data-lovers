@@ -22,7 +22,13 @@
 
 
 }
+.search{
+ margin-left: 45%;
+}
+.doces{
+  position: relative;
 
+}
 /* Reset Select */
 select {
   -webkit-appearance: none;
@@ -139,6 +145,7 @@ select {
 
   
   @media screen and (max-width: 600px) {
+ 
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -183,8 +190,18 @@ select {
 
 
   @media only screen and (min-width: 320px) {
-
-    
+    .search{
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      width: 30%;
+      min-width: 30%;
+      max-width: 30%;
+      font-size: 110%;
+      text-decoration: none;
+     }
+ 
     .container-pokemons-painel{
       padding-inline-start: 0;
       background-color:transparent;
