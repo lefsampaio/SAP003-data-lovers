@@ -39,7 +39,7 @@ Na medida do possível, termine uma história de usuário antes de passar para a
 seguinte (cumpra com as definições de pronto + critérios de aceitação).
 
 ### Desenho de interface do usuário
-
+![](interface.png)
 
 #### Protótipo de baixa fidelidade
 ![](prototipo.jpg)
