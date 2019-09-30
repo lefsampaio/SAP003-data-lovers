@@ -27,66 +27,35 @@ O objetivo da aplicação é oferecer uma interface intuitiva e divertida que pr
 
 ### Histórias de usuário
 
-Uma vez que entenda a necessidade dos usuários, escreva as [Historias de
-Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representem
-tudo que o usuário precisa fazer/ver. As **histórias de usuário** devem ser o
-resultado de seu processo de investigação/pesquisa de seus usuários.
+Primeiro Sprint: Como jogadora de Pokémon, desejo ter acesso a uma página com as informações de todos os 151 pokémons. Segundo Sprint: Quero ver as caracteristicas dos pokémons para saber quais pokémons tem vantagens sobre outros. Terceira Sprint:Desejo saber quantos doces preciso para evoluir meus pokémons para me planejar melhor.
 
-Não esqueça de incluir a definição de pronto (_definition of done_) e os
-critérios de aceitação para cada uma.
-
-Na medida do possível, termine uma história de usuário antes de passar para a
-seguinte (cumpra com as definições de pronto + critérios de aceitação).
+Quero visualizar principais informações e imagens dos 151 pokémons. Quero ter opções de visualização por tipo, fraqueza e tipo de ovos. Que a cada pokémon consultado eu possa visualizar o valor que eu preciso conseguir de doces para alcançar a última evolução.
 
 ### Desenho de interface do usuário
-![](interface.png)
-
 #### Protótipo de baixa fidelidade
 ![](prototipo.jpg)
 
-Durante seu trabalho você deverá fazer e iterar rascunhos de sua solução usando
-lápis e papel. Recomendamos que fotografe todas as iterações que fizer, suba
-para seu repositório e as mencione no `README.md`.
 
 #### Testes de usabilidade
-
-Durante o desafio você deverá fazer testes de usabilidade com usuários
-diferentes, e com base nos resultados desses testes, iterar seus desenhos de
-interface. Conte-nos quais problemas de usabilidade você detectou através dos
-testes e como os resolveu na proposta final.
+Alguns filtros não filtram simultaneamente
 
 ### Implementação da interface de usuário (HTML/CSS/JS)
-
-Após desenhar sua interface de usuário, deverá trabalhar na sua implementação.
-**Não** é necessário que construa a interface exatamente da mesma forma que
-desenhou. Terá um tempo limitado para trabalhar no projeto, então você deve
-priorizar as tarefas.
-
-No mínimo, sua implementação deverá:
-
-1. Mostrar os dados em uma interface: pode ser em cards, tabelas, listas, etc.
-2. Permitir ao usuário filtrar e ordenar dados;
-3. Calcular estatísticas, como média aritmética, máximo ou mínimo de algum
-   atributo numérico, ou contar quantas vezes aparece determinada informação,
-   por exemplo.
-4. Ser _responsivo_, ou seja, deve ser visualizada sem problemas a partir de
-   diversos tamanhos de tela: celulares, tablets, notebooks, etc.
-
+![](interface.png)
 
 
 ## 4. Checklist
 
 * [x] Usar VanillaJS.
 * [x] Não utilizar `this`.
-* [ ] Passa pelo linter (`npm run pretest`)
-* [ ] Passa pelos testes (`npm test`)
-* [ ] Testes unitários cobrem um mínimo de 70% de statements, functions,
+* [x] Passa pelo linter (`npm run pretest`)
+* [x] Passa pelos testes (`npm test`)
+* [x] Testes unitários cobrem um mínimo de 70% de statements, functions,
   lines e branches.
-* [ ] Inclui uma _definição de produto_ clara e informativa no `README.md`.
-* [ ] Inclui histórias de usuário no `README.md`.
-* [ ] Inclui rascunho da solução (protótipo de baixa fidelidade) no
+* [x] Inclui uma _definição de produto_ clara e informativa no `README.md`.
+* [x] Inclui histórias de usuário no `README.md`.
+* [x] Inclui rascunho da solução (protótipo de baixa fidelidade) no
   `README.md`.
-* [ ] Inclui uma lista de problemas detectados nos testes de usabilidade no `README.md`.
+* [x] Inclui uma lista de problemas detectados nos testes de usabilidade no `README.md`.
 * [x] UI: Mostra lista/tabela/etc com dados e/ou indicadores.
 * [x] UI: Permite ordenar dados por um ou mais campos (asc e desc).
 * [x] UI: Permite filtrar dados com base em uma condição.
