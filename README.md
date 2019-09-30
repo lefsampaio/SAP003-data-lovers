@@ -37,7 +37,7 @@ Quero visualizar principais informações e imagens dos 151 pokémons. Quero ter
 
 
 #### Testes de usabilidade
-Alguns filtros não filtram simultaneamente
+Filtros não filtram simultaneamente.
 
 ### Implementação da interface de usuário (HTML/CSS/JS)
 ![](interface.png)
