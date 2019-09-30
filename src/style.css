@@ -309,3 +309,75 @@ select {
   
   }
     }
+    aside{
+  
+      width: 20%;
+      display: flex;
+      float: right;
+      padding-left: 20px;
+       
+    }
+     aside, section{
+      margin-top: 0px;
+     
+      
+    } 
+    .aside-select{
+      position: relative;
+      width: 16em;
+      height: 3em;
+      line-height: 3;
+      background: #acd6ff ;
+      overflow: hidden;
+      border-radius: .25em;
+      }
+    
+    
+    textarea {
+      font-size: .8rem;
+      letter-spacing: 1px;
+    }
+    textarea {
+      position: relative;
+      display: flex;
+      width: 20em;
+      height: 3em;
+      line-height: 3;
+      background: #acd6ff ;
+      overflow: hidden;
+      border-radius: .25em;
+      box-shadow: 1px 1px 1px #999;
+    }
+    h2 {
+      text-align: left;
+      font-size: 1.5em;
+      color: #ffd600;
+      text-shadow: 1px 1px rgba(0,0,0); 
+    
+    }
+    
+    @media screen and (max-width: 600px)  {
+      aside{
+        clear:both;
+      }
+      aside{ 
+       
+        display: flex;
+        bottom: 0;
+        width: 100%;
+           
+       }
+       aside section {  
+        margin: 0 auto;
+        text-align: center; 
+        padding-bottom: 2em;
+      }  
+      textarea{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h2{
+        text-align: center; 
+      }
+    }

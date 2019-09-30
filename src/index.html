@@ -12,42 +12,48 @@
   <main>
     <header>
       <section class="topnav">
-        <section>
-          <select id="types-menu" class=" menu select">
-          </select>
-        </section>
-        <section>
-          <select id="alpha-order" class="menu select">
-            <option value="none-type">Ordem alfabética:</option>
-            <option value="a-z">A-Z</option>
-            <option value="z-a">Z-A</option>
-          </select>
+       <section>
+         <select id="types-menu" class=" menu select">
+         </select>
+       </section>
+       <section>
+         <select id="alpha-order" class="menu select">
+           <option value="none-type">Ordem alfabética:</option>
+           <option value="a-z">A-Z</option>
+           <option value="z-a">Z-A</option>
+         </select>
 
-          <select id="eggs-menu" class="menu select">
-          </select>
+         <select id="eggs-menu" class="menu select">
+         </select> 
           <select id="weakness-menu" class="menu select">
-          </select>
-
-          <select id="evolution-menu" class="menu select">
-          </select>
-
-        </section>
-      </section>
-
-      <section id="candies"></section>
+         </select> 
       
-      <section>
-        <img class="header__logo" src="pgo_logo.png">
-        <h1 class="h1 header">Bem vinda(o) a sua POKÉDEX</h1>
-      </section>
-    </header>
+
+       </section>
+     </section> 
+    
+     
+     <section>
+       <img class="header__logo" src="pgo_logo.png">
+       <h1 class="h1 header">Bem vinda(o) a sua POKÉDEX</h1>
+     </section>
+     
+   </header>
+   <aside>
+       <section>
+         <h2>Descubra aqui quantos doces seu Pokémon precisa para chegar na sua última evolução!</h2>
+         <select id="evolution-menu" class="aside-select">
+         </select>
+         <textarea id="sumCandy" class= "aside"></textarea>
+       </section>  
+       
+     </aside>
 
 
-
-    <section class="container-pokemons-painel">
-      <section id="pokemons-list" class="pokemons-painel"></section>
-    </section>
-  </main>
+   <section class="container-pokemons-painel">
+     <section id="pokemons-list" class="pokemons-painel"></section>
+   </section>
+ </main>
 
 
   <script src="data/pokemon/pokemon.js"></script>
